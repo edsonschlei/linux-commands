@@ -1,0 +1,8 @@
+
+cd 
+cd .local/share/applications
+
+gnome-desktop-item-edit --create-new <item>.desktop
+
+gnome-desktop-item-edit --create-new Tor\ Browser.desktop
+
