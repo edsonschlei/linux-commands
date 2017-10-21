@@ -67,7 +67,9 @@ sudo snap install brackets --classic
 
 ## Libre Office
 
+When libreoffice is already installed with apt, than remove it first.
 ```
+sudo apt remove --purge libreoffice*
 sudo snap install libreoffice
 ```
 
