@@ -47,6 +47,14 @@ Download the .deb file
 gdebi vivaldi-stable_1.12.955.38-1_amd64.deb
 ```
 
+## Opera
+
+Page: (opera)[http://www.opera.com]
+
+Download link (Opera version 48)[http://download1.operacdn.com/pub/opera/desktop/48.0.2685.50/linux/opera-stable_48.0.2685.50_amd64.deb]
+
+
+
 ## Keepass
 
 ```
@@ -85,3 +93,33 @@ sudo apt-get install shutter
 ```
 sudo snap install vlc
 ```
+
+## SDKMAN
+
+see the sdkman.md file
+
+
+## Eclipse
+
+Eclipse depends on the installation from java, use sdkman to install java and other java developer environments.
+
+Page: [Download](https://www.eclipse.org/downloads/)
+
+http://ftp-stud.fht-esslingen.de/pub/Mirrors/eclipse/oomph/epp/oxygen/R/eclipse-inst-linux64.tar.gz
+
+Extract the eclipse-inst-linux64.tar.gz file
+
+Run the install
+
+cd ~/Downloads/eclipse-inst-linux64/eclipse-installer
+
+
+## Git
+
+### Git console
+
+
+### gitkraken
+
+
+https://release.gitkraken.com/linux/gitkraken-amd64.deb
