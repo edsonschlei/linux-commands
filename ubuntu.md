@@ -20,3 +20,66 @@ sudo apt install snapd
 sudo apt install pulseaudio
 sudo apt install snapd-xdg-open
 ```
+
+## gdebi
+
+```
+sudo apt-get install gdebi
+```
+
+## Chrome
+
+Page: [How to install Google Chrome](https://askubuntu.com/questions/510056/how-to-install-google-chrome)
+
+```
+wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
+echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
+sudo apt-get update
+sudo apt-get install google-chrome-stable
+```
+
+## Vivaldi
+
+Page: [https://vivaldi.com/](https://vivaldi.com/)
+
+Download the .deb file
+```
+gdebi vivaldi-stable_1.12.955.38-1_amd64.deb
+```
+
+## Keepass
+
+```
+sudo snap install keepassxc
+```
+
+## Atom
+
+```
+sudo snap install atom --classic
+```
+
+## Brackets
+
+```
+sudo snap install brackets --classic
+```
+
+## Libre Office
+
+```
+sudo snap install libreoffice
+```
+
+## Shutter
+Page: [Install The Latest Shutter Screenshot Tool in Ubuntu](http://tipsonubuntu.com/2015/04/13/install-the-latest-shutter-screenshot-tool-in-ubuntu)
+
+```
+sudo apt-get install shutter
+```
+
+## VLC
+
+```
+sudo snap install vlc
+```
