@@ -38,3 +38,12 @@ sudo snap install libreoffice
 
 # install vlc
 sudo snap install vlc
+
+# install git
+sudo apt install git
+
+# install gitkraken
+cd /tmp
+wget https://release.gitkraken.com/linux/gitkraken-amd64.deb && sudo gdebi gitkraken-amd64.deb
+
+
