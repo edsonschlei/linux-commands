@@ -15,10 +15,20 @@ Bellow is a list of programs that I usually use at work and home.
 ```
 guake -t
 ```
+## trim SSD
 
 TO DO - configuration to clean the ssd disk with cronjob
 
-Program installation
+## git
+
+https://git-scm.com/book/en/v2/Getting-Started-First-Time-Git-Setup
+
+```
+$ git config --global user.name "Edson Elmar Schlei"
+$ git config --global user.email edson.schlei@gmail.com
+```
+
+# Program installation
 
 ## Snap
 
@@ -52,6 +62,7 @@ wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-ke
 echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sudo tee /etc/apt/sources.list.d/google-chrome.list
 sudo apt-get update
 sudo apt-get install google-chrome-stable
+sudo apt-get install chrome-gnome-shell
 ```
 
 ## Vivaldi
@@ -186,4 +197,23 @@ Page: [Download the linux version  ](https://release.gitkraken.com/linux/gitkrak
 ```
 cd /tmp
 wget https://release.gitkraken.com/linux/gitkraken-amd64.deb && sudo gdebi gitkraken-amd64.deb
+```
+
+## install media codecs
+
+```
+sudo apt-get install ubuntu-restricted-extras
+```
+
+## Calibre
+
+```
+sudo apt-get install calibre
+```
+
+## Prolong your battery and prevent overheating
+
+```
+sudo apt install tlp tlp-rdw
+sudo tlp start
 ```

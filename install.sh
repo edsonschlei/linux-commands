@@ -51,3 +51,10 @@ sudo apt install gnome-tweak-tool
 sudo apt install virtualbox
 
 sudo apt install guake
+
+sudo apt-get install ubuntu-restricted-extras
+
+sudo apt-get install calibre
+
+sudo apt install tlp tlp-rdw
+sudo tlp start
