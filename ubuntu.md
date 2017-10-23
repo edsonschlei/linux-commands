@@ -5,8 +5,18 @@ After sometime, after each time I installed Ubuntu in a new computer, I need to 
 
 Bellow is a list of programs that I usually use at work and home.
 
-Ubuntu Configurations
+# Ubuntu Configurations
 
+## Guake configuration for ubuntu 17.10
+
+* Open the Start program, and add guake to the list.
+* Open Configurations do gnome, Keyboard, add a special f12 key map with the following line:
+
+```
+guake -t
+```
+
+TO DO - configuration to clean the ssd disk with cronjob
 
 Program installation
 
@@ -25,6 +35,12 @@ sudo apt install snapd-xdg-open
 
 ```
 sudo apt-get install gdebi
+```
+
+## Guake
+
+```
+sudo apt install guake
 ```
 
 ## Chrome
@@ -94,6 +110,18 @@ sudo apt-get install shutter
 sudo snap install vlc
 ```
 
+## gnome-tweak-tool
+
+```
+sudo apt install gnome-tweak-tool
+```
+
+## Virtual box
+
+```
+sudo apt install virtualbox
+```
+
 ## SDKMAN
 
 see the sdkman.md file
@@ -116,12 +144,12 @@ cd ~/Downloads/eclipse-inst-linux64/eclipse-installer
 ./eclipse-inst
 ```
 
-### Create an Eclipse application launcher 
+### Create an Eclipse application launcher
 
 Page: [How to Install The Latest Eclipse in Ubuntu](http://ubuntuhandbook.org/index.php/2016/01/how-to-install-the-latest-eclipse-in-ubuntu-16-04-15-10/)
 
 ```
-cd ~ 
+cd ~
 gedit .local/share/applications/eclipse.desktop
 ```
 
@@ -159,5 +187,3 @@ Page: [Download the linux version  ](https://release.gitkraken.com/linux/gitkrak
 cd /tmp
 wget https://release.gitkraken.com/linux/gitkraken-amd64.deb && sudo gdebi gitkraken-amd64.deb
 ```
-
-

@@ -46,4 +46,8 @@ sudo apt install git
 cd /tmp
 wget https://release.gitkraken.com/linux/gitkraken-amd64.deb && sudo gdebi gitkraken-amd64.deb
 
+sudo apt install gnome-tweak-tool
 
+sudo apt install virtualbox
+
+sudo apt install guake
