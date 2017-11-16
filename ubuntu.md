@@ -17,7 +17,14 @@ guake -t
 ```
 ## trim SSD
 
-TO DO - configuration to clean the ssd disk with cronjob
+```
+#!/bin/sh
+LOG=/var/log/trim.log
+echo "*** $(date -R) ***" >> $LOG
+fstrim -v / >> $LOG
+fstrim -v /home >> $LOG
+```
+
 
 ## git
 
