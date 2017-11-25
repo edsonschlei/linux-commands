@@ -39,19 +39,33 @@ $ git config --global user.email edson.schlei@gmail.com
 
 ## Snap
 
+### installing snapd
+
 Page: [snap](https://docs.snapcraft.io/core/install-ubuntu)
 
 ```
-sudo apt update
-sudo apt install snapd
-sudo apt install pulseaudio
-sudo apt install snapd-xdg-open
+#sudo apt update
+#sudo apt install snapd
+#sudo apt install pulseaudio
+#sudo apt install snapd-xdg-open
+```
+
+### Removing snap
+
+Snap is using to much resources, then i decided to remove it.
+
+remove pgae: [Thread: how to remove snappy or snapd](https://ubuntuforums.org/showthread.php?t=2328152)
+
+```
+sudo apt purge snapd ubuntu-core-launcher squashfs-tools
 ```
 
 ## gdebi
 
+Anwendungspakete installieren und betrachten
+
 ```
-sudo apt-get install gdebi
+sudo apt install gdebi
 ```
 
 ## Guake
@@ -92,57 +106,95 @@ Download link (Opera version 48)[http://download1.operacdn.com/pub/opera/desktop
 ## Keepass
 
 ```
-sudo snap install keepassxc
+sudo add-apt-repository ppa:phoerious/keepassxc
+sudo apt update && sudo apt install keepassxc
 ```
 
 ## Atom
 
 ```
-sudo snap install atom --classic
+sudo add-apt-repository ppa:webupd8team/atom
+sudo apt-get update && sudo apt-get install atom
 ```
 
 ## Brackets
 
 ```
-sudo snap install brackets --classic
+sudo add-apt-repository ppa:webupd8team/brackets
+sudo apt update && sudo apt install brackets
 ```
 
 ## Libre Office
 
-When libreoffice is already installed with apt, than remove it first.
+page: [LibreOffice](https://wiki.ubuntu.com/LibreOffice)
+
+### using stable version
+
+```
+sudo apt install libreoffice
+```
+
+### using a RC versions
 ```
 sudo apt remove --purge libreoffice*
-sudo snap install libreoffice
+sudo apt-get install python-software-properties
+sudo apt-add-repository ppa:libreoffice/ppa
+sudo apt update
+sudo apt install -y libreoffice
 ```
+
+See the page, to install additional libreoffice packages.
+
+```
+# installing the german packages
+sudo apt install -y libreoffice-help-de
+```
+
 
 ## Shutter
 Page: [Install The Latest Shutter Screenshot Tool in Ubuntu](http://tipsonubuntu.com/2015/04/13/install-the-latest-shutter-screenshot-tool-in-ubuntu)
 
 ```
-sudo apt-get install shutter
+sudo apt install -y shutter
 ```
 
 ## VLC
 
 ```
-sudo snap install vlc
+sudo apt install -y vlc
 ```
 
 ## gnome-tweak-tool
 
 ```
-sudo apt install gnome-tweak-tool
+sudo apt install -y gnome-tweak-tool
 ```
 
 ## Virtual box
 
 ```
-sudo apt install virtualbox
+sudo apt install -y virtualbox
 ```
 
 ## SDKMAN
 
-see the sdkman.md file
+see the [sdkman.md](sdkman.md) file
+
+## Java 8
+
+page: [Ubuntu Java 8](http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html)
+```
+sudo add-apt-repository ppa:webupd8team/java
+echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
+sudo apt-get update && sudo apt-get install -y oracle-java8-installer
+sudo apt install -y oracle-java8-set-default
+```
+
+### set as default Java
+```
+sudo apt install -y oracle-java8-set-default
+```
+
 
 
 ## Eclipse
@@ -195,7 +247,6 @@ Name[en]=Eclipse
 sudo apt install git
 ```
 
-
 ### gitkraken
 
 The best git tool to manage git branches is gitkraken
@@ -209,7 +260,7 @@ wget https://release.gitkraken.com/linux/gitkraken-amd64.deb && sudo gdebi gitkr
 ## install media codecs
 
 ```
-sudo apt-get install ubuntu-restricted-extras
+sudo apt install ubuntu-restricted-extras
 ```
 
 ## Calibre
