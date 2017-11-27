@@ -18,6 +18,12 @@ guake -t
 ## trim SSD
 
 ```
+cd /etc/cron.daily
+sudo nano trim.sh
+# copy the script bellow and save
+sudo chmod +x trim.sh
+```
+```
 #!/bin/sh
 LOG=/var/log/trim.log
 echo "*** $(date -R) ***" >> $LOG
