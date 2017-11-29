@@ -19,7 +19,7 @@ guake -t
 
 ```
 cd /etc/cron.daily
-sudo nano trim.sh
+sudo nano trim
 # copy the script bellow and save
 sudo chmod +x trim.sh
 ```
