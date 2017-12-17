@@ -289,3 +289,8 @@ sudo add-apt-repository ppa:system76/pop
 sudo apt update && sudo apt install -y pop-theme
 ```
 
+# Pencil
+
+(Pencil Download)[http://pencil.evolus.vn/Downloads.html]
+
+
