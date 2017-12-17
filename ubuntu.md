@@ -281,3 +281,11 @@ sudo apt-get install calibre
 sudo apt install tlp tlp-rdw
 sudo tlp start
 ```
+
+# Pop Theme
+
+```
+sudo add-apt-repository ppa:system76/pop
+sudo apt update && sudo apt install -y pop-theme
+```
+
