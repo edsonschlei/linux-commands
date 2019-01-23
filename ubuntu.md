@@ -109,7 +109,7 @@ Download link (Opera version 48)[http://download1.operacdn.com/pub/opera/desktop
 
 
 
-## Keepass
+## KeepassXC
 
 ```
 sudo add-apt-repository ppa:phoerious/keepassxc
@@ -129,6 +129,27 @@ sudo apt-get update && sudo apt-get install atom
 sudo add-apt-repository ppa:webupd8team/brackets
 sudo apt update && sudo apt install brackets
 ```
+
+## spotify
+
+page: [Spotify for Linux](https://www.spotify.com/lu-fr/download/linux/)
+
+```
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
+echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
+sudo apt-get update
+sudo apt-get install spotify-client
+```
+
+## extra video and audio codes
+
+```
+sudo apt update
+sudo apt install libdvdnav4 libdvdread4 gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly libdvd-pkg
+sudo dpkg-reconfigure libdvd-pkg
+sudo apt install ubuntu-restricted-extras
+```
+
 
 ## Libre Office
 
@@ -188,6 +209,8 @@ see the [sdkman.md](sdkman.md) file
 
 ## Java 8
 
+### Avoid the use java from Oracle, prefer to use the open or zulu version, use sdkman to install it.
+
 page: [Ubuntu Java 8](http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html)
 ```
 sudo add-apt-repository ppa:webupd8team/java
@@ -201,15 +224,11 @@ sudo apt install -y oracle-java8-set-default
 sudo apt install -y oracle-java8-set-default
 ```
 
-
-
 ## Eclipse
 
 Eclipse depends on the installation from java, use sdkman to install java and other java developer environments.
 
 Page: [Download](https://www.eclipse.org/downloads/)
-
-http://ftp-stud.fht-esslingen.de/pub/Mirrors/eclipse/oomph/epp/oxygen/R/eclipse-inst-linux64.tar.gz
 
 Extract the eclipse-inst-linux64.tar.gz file
 
@@ -282,15 +301,60 @@ sudo apt install tlp tlp-rdw
 sudo tlp start
 ```
 
-# Pop Theme
+## Pop Theme
 
 ```
 sudo add-apt-repository ppa:system76/pop
 sudo apt update && sudo apt install -y pop-theme
 ```
 
-# Pencil
+## Pencil
 
 (Pencil Download)[http://pencil.evolus.vn/Downloads.html]
 
 
+## fonts inconsolata
+
+```
+sudo apt-get install fonts-inconsolata
+```
+
+## Google clound tools
+
+```
+export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
+echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
+sudo apt-get update 
+sudo apt-get install google-cloud-sdk
+sudo apt-get install google-cloud-sdk-app-engine-java
+sudo apt-get install google-cloud-sdk-app-engine-python
+sudo apt-get install google-cloud-sdk-app-engine-python-extras
+sudo apt-get install google-cloud-sdk-app-engine-java
+sudo apt-get install google-cloud-sdk-app-engine-go
+sudo apt-get install google-cloud-sdk-datalab
+sudo apt-get install google-cloud-sdk-datastore-emulator
+sudo apt-get install google-cloud-sdk-pubsub-emulator
+sudo apt-get install google-cloud-sdk-cbt
+sudo apt-get install google-cloud-sdk-cloud-build-local
+sudo apt-get install google-cloud-sdk-bigtable-emulator
+sudo apt-get install kubectl
+```
+
+## Visual Studio code
+
+```
+curl https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
+sudo sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+sudo apt-get install apt-transport-https
+sudo apt-get update
+sudo apt-get install -y code
+
+```
+
+## Diffuse
+
+```
+sudo apt-get install diffuse
+```
