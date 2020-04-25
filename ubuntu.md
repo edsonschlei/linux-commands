@@ -101,6 +101,14 @@ Download the .deb file
 gdebi vivaldi-stable_1.12.955.38-1_amd64.deb
 ```
 
+or
+
+```
+wget -qO- http://repo.vivaldi.com/stable/linux_signing_key.pub | sudo apt-key add -
+sudo add-apt-repository "deb [arch=i386,amd64] http://repo.vivaldi.com/stable/deb/ stable main"
+sudo apt install vivaldi-stable
+```
+
 ## Opera
 
 Page: (opera)[http://www.opera.com]
@@ -178,11 +186,11 @@ sudo apt install -y libreoffice-help-de
 ```
 
 
-## Shutter
-Page: [Install The Latest Shutter Screenshot Tool in Ubuntu](http://tipsonubuntu.com/2015/04/13/install-the-latest-shutter-screenshot-tool-in-ubuntu)
+## Flameshot
+Page: [Flameshot](https://wiki.ubuntuusers.de/Flameshot/)
 
 ```
-sudo apt install -y shutter
+sudo apt install -y flameshot
 ```
 
 ## VLC
@@ -211,17 +219,10 @@ see the [sdkman.md](sdkman.md) file
 
 ### Avoid the use java from Oracle, prefer to use the open or zulu version, use sdkman to install it.
 
-page: [Ubuntu Java 8](http://www.webupd8.org/2012/09/install-oracle-java-8-in-ubuntu-via-ppa.html)
-```
-sudo add-apt-repository ppa:webupd8team/java
-echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
-sudo apt-get update && sudo apt-get install -y oracle-java8-installer
-sudo apt install -y oracle-java8-set-default
-```
+### Instal the default Java for the SO
 
-### set as default Java
 ```
-sudo apt install -y oracle-java8-set-default
+sudo apt install -y default-jdk
 ```
 
 ## Eclipse
@@ -301,13 +302,6 @@ sudo apt install tlp tlp-rdw
 sudo tlp start
 ```
 
-## Pop Theme
-
-```
-sudo add-apt-repository ppa:system76/pop
-sudo apt update && sudo apt install -y pop-theme
-```
-
 ## Pencil
 
 (Pencil Download)[http://pencil.evolus.vn/Downloads.html]
@@ -359,4 +353,28 @@ sudo apt-get install -y code
 
 ```
 sudo apt-get install diffuse
+```
+
+## SAMBA Tools
+
+```
+sudo apt-get install cifs-utils keyutils 
+```
+
+## Signal
+
+```
+curl -s https://updates.signal.org/desktop/apt/keys.asc | sudo apt-key add -
+echo "deb [arch=amd64] https://updates.signal.org/desktop/apt xenial main" | sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
+sudo apt update && sudo apt install signal-desktop
+```
+
+## Android Tools
+
+The Tools to install the new lineage version on your android phone.
+
+[Android Tools](http://www.bernaerts-nicolas.fr/linux/74-ubuntu/354-ubuntu-xenial-android-adb-fastboot-qtadb)
+
+```
+sudo apt-get install android-tools-adb android-tools-fastboot
 ```

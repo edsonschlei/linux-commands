@@ -5,8 +5,12 @@
 #
 #
 
+# install curl
+sudo apt install curl
+
 # Removing install snap
-sudo apt purge snapd ubuntu-core-launcher squashfs-tools
+# sudo apt purge snapd ubuntu-core-launcher squashfs-tools
+# sudo apt install gnome-system-monitor gnome-characters gnome-logs gnome-calculator
 
 # install gdebi
 sudo apt-get install -y gdebi
@@ -17,20 +21,23 @@ echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' | sud
 sudo apt-get update
 sudo apt-get install -y google-chrome-stable
 
-# install shutter
-sudo apt install -y shutter
+# install flameshot
+sudo apt install -y flameshot
 
 # install keepassxc
 sudo add-apt-repository ppa:phoerious/keepassxc
 sudo apt update && sudo apt install -y keepassxc
 
 # install atom
-sudo add-apt-repository ppa:webupd8team/atom
-sudo apt-get update && sudo apt-get install -y atom
+# sudo add-apt-repository ppa:webupd8team/atom
+# sudo apt-get update && sudo apt-get install -y atom
 
 # install brackets
-sudo add-apt-repository ppa:webupd8team/brackets
-sudo apt update && sudo apt install -y brackets
+# sudo add-apt-repository ppa:webupd8team/brackets
+# sudo apt update && sudo apt install -y brackets
+
+# spotify dependencies
+sudo apt-get install libcanberra-gtk-module
 
 # install spotify
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys 931FF8E79F0876134EDDBDCCA87FF9DF48BF1C90
@@ -47,8 +54,8 @@ sudo apt install ubuntu-restricted-extras
 
 
 # install libreoffice
-sudo apt install -y libreoffice
-sudo apt install -y libreoffice-help-de
+# sudo apt install -y libreoffice
+# sudo apt install -y libreoffice-help-de
 
 # install vlc
 sudo install install -y vlc
@@ -79,10 +86,6 @@ sudo tlp start
 #echo oracle-java8-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
 #sudo apt-get update && sudo apt-get install -y oracle-java8-installer
 #sudo apt install -y oracle-java8-set-default
-
-# pop theme
-sudo add-apt-repository ppa:system76/pop
-sudo apt update && sudo apt install -y pop-theme
 
 # fonts inconsolata
 sudo apt-get install -y fonts-inconsolata
@@ -119,4 +122,14 @@ sudo apt-get install -y code
 # Diffuse
 
 sudo apt-get install -y diffuse
+
+# SAMBA Tools
+sudo apt-get install -y cifs-utils keyutils 
+
+## Vivaldi
+
+wget -qO- http://repo.vivaldi.com/stable/linux_signing_key.pub | sudo apt-key add -
+sudo add-apt-repository "deb [arch=i386,amd64] http://repo.vivaldi.com/stable/deb/ stable main"
+sudo apt install -y vivaldi-stable
+
 
