@@ -31,6 +31,13 @@ fstrim -v / >> $LOG
 fstrim -v /home >> $LOG
 ```
 
+## Disable ipv6
+
+If you user a VPN provider that doesn't support ipv6, you muss disable ipv6 to avoid your VPN to not use your VPN connection.
+
+[How To Disable IPV6 on Linux/Ubuntu?](https://support.purevpn.com/how-to-disable-ipv6-linuxubuntu)
+
+
 
 ## git
 

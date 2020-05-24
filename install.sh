@@ -5,12 +5,17 @@
 #
 #
 
+cd /tmp
+sudo apt update
+sudo apt upgrade -y
+
 # install curl
 sudo apt install -y curl
+sudo apt install -y net-tools
 
 # Removing install snap
 sudo apt purge -y snapd ubuntu-core-launcher squashfs-tools
-sudo apt install gnome-system-monitor gnome-characters gnome-logs gnome-calculator
+sudo apt install -y gnome-system-monitor gnome-characters gnome-logs gnome-calculator
 
 # install gdebi
 sudo apt install -y gdebi
@@ -51,9 +56,9 @@ sudo apt install -y spotify-client
 # libdvd-pkg libdvdnav4
 # sudo dpkg-reconfigure libdvd-pkg
 
-sudo apt update
-sudo apt install gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly 
-sudo apt install ubuntu-restricted-extras
+# sudo apt update
+# sudo apt install gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly 
+# sudo apt install ubuntu-restricted-extras
 
 
 # install libreoffice
@@ -71,7 +76,8 @@ sudo apt install -y git
 
 # install gitkraken
 cd /tmp
-wget https://release.axocdn.com/linux/gitkraken-amd64.deb && sudo gdebi gitkraken-amd64.deb
+wget https://release.axocdn.com/linux/gitkraken-amd64.deb 
+sudo gdebi gitkraken-amd64.deb
 
 sudo apt install -y gnome-tweak-tool
 
@@ -100,8 +106,8 @@ sudo apt install -y fonts-inconsolata
 
 # Google clound tools
 
-export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
-echo "deb http://packages.cloud.google.com/apt $CLOUD_SDK_REPO main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+# export CLOUD_SDK_REPO="cloud-sdk-$(lsb_release -c -s)"
+echo "deb http://packages.cloud.google.com/apt cloud-sdk main" | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
 curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add -
 sudo apt update 
 sudo apt install -y google-cloud-sdk
@@ -129,13 +135,13 @@ sudo apt install -y code
 
 # Vim and diff tools
 # gvim, vim, gvimdiff
-sudo apt install vim vim-gtk3
+sudo apt install -y vim vim-gtk3
 
 # SAMBA Tools
 sudo apt install -y cifs-utils keyutils 
 
 # ssh fs - to mount remout ssh
-sudo apt install sshfs
+sudo apt install -y sshfs
 
 ## Vivaldi
 
@@ -145,4 +151,22 @@ sudo apt install -y vivaldi-stable
 
 
 ## Android Tools
-sudo apt install android-tools-adb android-tools-fastboot
+sudo apt install -y android-tools-adb android-tools-fastboot
+
+
+# oppen ssh server
+sudo apt install -y openssh-server openssh-client
+
+# Install Node js - version 14
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs
+
+curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+
+sudo apt update && sudo apt install -y yarn
+
+# client for transmiision gui
+sudo apt install -y transgui
+
+
