@@ -30,9 +30,8 @@ sudo apt install -y google-chrome-stable
 sudo apt install -y flameshot
 
 # install keepassxc
-# sudo add-apt-repository ppa:phoerious/keepassxc
-# sudo apt update && 
-sudo apt install -y keepassxc
+sudo add-apt-repository ppa:phoerious/keepassxc
+sudo apt update && sudo apt install -y keepassxc
 
 # install atom
 # sudo add-apt-repository ppa:webupd8team/atom
@@ -169,4 +168,21 @@ sudo apt update && sudo apt install -y yarn
 # client for transmiision gui
 sudo apt install -y transgui
 
+#
+# https://github.com/jgraph/drawio-desktop/releases/latest
+#
+cd /tmp
+wget https://github.com/jgraph/drawio-desktop/releases/download/v13.0.3/draw.io-amd64-13.0.3.deb
+sudo gdebi -n draw.io-amd64-13.0.3.deb
+
+#
+# Install Gimp
+#
+sudo apt install -y gimp
+
+#
+# sync files with google drive
+# https://rclone.org/drive/ 
+#
+sudo apt install rclone
 
