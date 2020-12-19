@@ -1,8 +1,8 @@
 #!/bin/bash
 
 #
-# Install all the programs that are available throght snap or apt
-#
+# Install all the programs that are available through apt
+# - Remove snap, it is too slow to use
 #
 
 cd /tmp
@@ -182,7 +182,7 @@ sudo apt install -y gimp
 
 #
 # sync files with google drive
-# https://rclone.org/drive/ 
+# https://rclone.org/drive/
 #
 sudo apt install rclone
 
