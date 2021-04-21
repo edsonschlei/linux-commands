@@ -1,0 +1,7 @@
+
+Update smb password:
+smbpasswd -r fs01 -U edson.schlei
+
+Connect to a samba server:
+smbclient "\\\\fs01\\home"  -U edson.schlei
+
