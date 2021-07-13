@@ -6,7 +6,7 @@
 #
 #
 
-cd /tmp
+# cd /tmp
 sudo apt update
 sudo apt upgrade -y
 
@@ -22,11 +22,11 @@ sudo systemctl start sshd
 sudo apt purge -y snapd ubuntu-core-launcher squashfs-tools
 sudo apt -y autoremove
 
-# Vim and diff tools
-# gvim, vim, gvimdiff
 sudo apt install -y vim vim-gtk3
 
 # install gdebi
+# Vim and diff tools
+# gvim, vim, gvimdiff
 sudo apt install -y gdebi
 
 # install chrome
@@ -36,8 +36,8 @@ sudo apt install -y gdebi
 sudo apt install -y flameshot
 
 # install keepassxc
-sudo add-apt-repository ppa:phoerious/keepassxc
-sudo apt update && sudo apt install -y keepassxc
+# sudo add-apt-repository ppa:phoerious/keepassxc
+sudo apt install -y keepassxc
 
 # install atom
 chmod +x install-atom.sh
@@ -51,7 +51,8 @@ chmod +x install-spotify.sh
 sudo apt install -y vlc
 
 # install smplayer
-sudo add-apt-repository ppa:rvm/smplayer
+sudo add-apt-repository -y -r ppa:rvm/smplayer
+sudo add-apt-repository -y ppa:rvm/smplayer
 sudo apt-get update
 sudo apt-get install -y smplayer smplayer-themes smplayer-skins
 
@@ -121,10 +122,10 @@ sudo apt install -y gimp
 # sync files with google drive
 # https://rclone.org/drive/
 #
-sudo apt install rclone
+sudo apt install -y rclone
 
 # Diff tool
-sudo apt install meld
+sudo apt install -y meld
 
 # Slack
 chmod +x install-slack.sh
@@ -167,6 +168,7 @@ sudo apt-get install -y nodejs
 
 # Javascript package manager
 curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+sudo rm -rf /etc/apt/sources.list.d/yarn.list
 echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
 sudo apt update && sudo apt install -y yarn
 
@@ -174,3 +176,5 @@ sudo apt update && sudo apt install -y yarn
 chmod +x install-gnome-extension.sh
 ./install-gnome-extension.sh
 
+
+sudo apt install -y fortune-mod
