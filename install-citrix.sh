@@ -56,3 +56,9 @@ else
 fi
 
 
+#
+# Fix problem "SSL Error 61" error, more info:
+# https://en.code-bude.net/2017/05/03/how-to-fix-ssl-error-61-in-citrix-web-receiver-on-linux/
+#
+sudo ln -s /usr/share/ca-certificates/mozilla/* /opt/Citrix/ICAClient/keystore/cacerts
+
