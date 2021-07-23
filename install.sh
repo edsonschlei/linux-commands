@@ -10,7 +10,7 @@ sudo apt update
 sudo apt upgrade -y
 
 # install curl
-sudo apt install -y curl
+sudo apt install -y curl net-tools
 sudo apt install -y net-tools
 
 # Removing install snap
