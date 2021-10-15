@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo rm -rf /etc/apt/sources.list.d/vivaldi.list
+
 cd /tmp
 rm -rf install-vivaldi
 mkdir install-vivaldi
