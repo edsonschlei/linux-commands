@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo rm -rf /etc/apt/sources.list.d/brave-browser-release.list
+
 cd /tmp
 
 sudo apt install -y apt-transport-https curl

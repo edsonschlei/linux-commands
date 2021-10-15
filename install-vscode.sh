@@ -1,5 +1,7 @@
 #!/bin/bash
 
+rm -rf /etc/apt/sources.list.d/vscode.list
+
 sudo apt install apt-transport-https
 
 cd /tmp

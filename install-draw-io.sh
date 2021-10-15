@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sudo apt install -y jq
+
 cd /tmp
 rm -rf install-drawio
 mkdir install-drawio
