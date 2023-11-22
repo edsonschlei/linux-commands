@@ -7,6 +7,6 @@
 
 cd /tmp
 
-sudo apt install -y gnome-shell-extensions
+sudo apt install -y gnome-shell-extensions gnome-shell-extension-prefs
 
 sudo apt install -y chrome-gnome-shell

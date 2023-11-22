@@ -1,5 +1,7 @@
 #!/bin/bash
 
+# sudo snap install insomnia
+
 cd /tmp
 rm -rf install-insomnia
 mkdir install-insomnia
