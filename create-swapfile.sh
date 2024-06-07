@@ -13,8 +13,9 @@ sudo mkswap /swapfile
 
 sudo swapon /swapfile
 
-# sudo nano /etc/fstab
-# /swapfile swap swap defaults 0 0
+# sudo vim /etc/fstab
+# /swapfile       none    swap    sw      0       0
+
 
 sudo swapon --show
 
@@ -24,7 +25,7 @@ cat /proc/sys/vm/swappiness
 
 sudo sysctl vm.swappiness=10
 
-# sudo nano /etc/sysctl.conf
+# sudo vim /etc/sysctl.conf
 # vm.swappiness=10
 
 
